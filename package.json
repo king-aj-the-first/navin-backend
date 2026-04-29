@@ -14,10 +14,14 @@
     "seed": "tsx src/scripts/seed.ts",
     "generate-api-key": "tsx src/scripts/generateApiKey.ts",
     "worker:stellar": "tsx src/workers/stellar.worker.ts",
+    "migrate:up": "migrate-mongo up --config migrate-mongo.config.cjs",
+    "migrate:down": "migrate-mongo down --config migrate-mongo.config.cjs",
+    "migrate:status": "migrate-mongo status --config migrate-mongo.config.cjs",
     "prepare": "husky"
   },
   "dependencies": {
     "@faker-js/faker": "^10.3.0",
+    "migrate-mongo": "^11.0.0",
     "@stellar/stellar-sdk": "^14.5.0",
     "@types/ioredis": "^4.28.10",
     "bcrypt": "^6.0.0",
